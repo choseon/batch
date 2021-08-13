@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:edcb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+  #      schema: classpath:/org/springframework/batch/core/schema-h2.sql
+  batch:
+    job:
+      enabled: false
+
+spring.batch.job.names: ${job.name:NONE}
+
+logging:
+  config: classpath:log4j2.xml
+
+
+api:
+  big: ## 한국언론진흥재단 빅카인드 API INFORMATION
+    utl: http://tools.kinds.or.kr:8888
+    accessKey: 309367ce-8103-4749-bdf7-2555f2e1471f
+
+  som: ## 바이브컴퍼니 썸트랜드 API INFORMATION
+    url: http://qt.some.co.kr/TrendMap/JSON/ServiceHandler
+    sources: { blog,twitter,news }
+
+  saf: ## 국가기술표준원 제품안전정보센터 API INFORMATION
+    url: http://www.safetykorea.kr/openapi/api/cert/
+    key: 2a596c2a-262e-4bd3-9bd4-b8304ba9eb71
+
+  biz: ## 중소기업연구원 중소벤처기업부 기업마당 API INFORMATION
+    url: http://www.bizinfo.go.kr/uss/rss/bizinfoApi.do
+    crtfcKey: k9mn7X
+    dataType: json
+
+
+  ## 네이버 쇼핑 API INFORMATION
+
+  ## 이베이 쇼핑 API INFORMATION
+
+  ## UN COMTRADE API INFORMATION
+
+  ## 네이버 카페 API INFORMATION
+
+  ## 금융감독원 API INFORMATION
+
+  ## kOTRA 대한무역투자진흥공사 API INFORMATION
+
